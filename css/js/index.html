@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My To-Do List</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="container" id="app">
+    <header class="header">
+      <h1>My To-Do List</h1>
+      <p class="subtitle">Simple • Clean • Persistent (Local Storage)</p>
+    </header>
+
+    <section class="input-area" aria-label="Add new task">
+      <form id="task-form" autocomplete="off">
+        <input id="task-input" type="text" placeholder="Add a new task..." aria-label="Task description" />
+        <button id="add-btn" type="submit" aria-label="Add task">Add</button>
+      </form>
+      <div class="controls">
+        <div class="left-info" id="left-info">0 tasks</div>
+        <div class="filter-group" role="tablist" aria-label="Filter tasks">
+          <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter" data-filter="active" role="tab" aria-selected="false">Active</button>
+          <button class="filter" data-filter="completed" role="tab" aria-selected="false">Completed</button>
+        </div>
+        <button id="clear-completed" class="link-btn">Clear completed</button>
+      </div>
+    </section>
+
+    <section class="list-area" aria-label="Task list">
+      <ul id="task-list" class="task-list" aria-live="polite"></ul>
+      <div id="empty-state" class="empty">No tasks yet — add your first task.</div>
+    </section>
+
+    <footer class="footer">
+      <small>Built with HTML • CSS • JavaScript • LocalStorage</small>
+    </footer>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
